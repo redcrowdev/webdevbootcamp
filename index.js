@@ -91,7 +91,7 @@ app.put('/products/:id', async (req, res) => {
    const {id} = req.params;
    console.log(req.body)
    const product = await Product.findByIdAndUpdate(id, req.body, {runValidators: true})
-   res.redirect(`products/${product._id}`)
+   res.redirect(`/products/${product._id}`)
 })
 
 //Last Route - not found handler ========================================
